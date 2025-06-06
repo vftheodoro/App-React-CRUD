@@ -32,7 +32,7 @@ function HomeStack() {
       <Stack.Screen 
         name="HomeScreen" 
         component={HomeScreen} 
-        options={{ title: 'Carros - Victor Theodoro' }} 
+        options={{ title: 'Carros' }} 
       />
       <Stack.Screen 
         name="CarDetails" 
