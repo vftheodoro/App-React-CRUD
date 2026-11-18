@@ -1,81 +1,55 @@
-# 🚗 Car App - React Native CRUD
+# Car App — React Native CRUD
 
-Um aplicativo móvel desenvolvido em React Native + Expo que oferece um sistema completo de CRUD (Create, Read, Update, Delete) para gerenciamento de carros, integrado com banco de dados SQL.
+Academic mobile project demonstrating create, read, update, and delete operations for a car catalog. The mobile interface is implemented with React Native / Expo and communicates with a PHP API backed by SQL.
 
-## 📱 Funcionalidades
+## Demonstrated functionality
 
-- ✨ Interface moderna e intuitiva
-- 🔄 Operações CRUD completas para carros
-- 💾 Persistência de dados com SQL
-- 👤 Perfil de usuário personalizado
-- ⭐ Sistema de carros favoritos
-- 🔍 Visualização detalhada de carros
-- 📝 Formulários de cadastro e edição
+- Browse car records and open details.
+- Create and edit entries through forms.
+- Organize favorite cars and view a user profile.
+- Navigate between screens using React Navigation.
+- Store or access data through the project's API and local app storage, according to each feature.
 
-## 🖼️ Screenshots
+## Architecture
 
-### Tela Inicial
-![Tela Inicial](Imagens/Tela%20inicial.png)
+| Component | Location | Technologies |
+| --- | --- | --- |
+| Mobile client | `App.js`, `src/screens`, `src/components` | React Native, Expo |
+| Backend | `api/cars.php`, `api/config.php` | PHP |
+| Database seed/schema | `Banco de Dados/cars.sql` | SQL |
+| API configuration | `src/config.js` | JavaScript |
+| UI guidance | `DESIGN_SYSTEM.md`, `DESIGN_ACCESSIBILITY.md` | Documentation |
 
-### Detalhes dos Carros
-![Detalhes dos Carros](Imagens/Tela%20de%20Detalhes%20dos%20Carros.png)
+## Run locally
 
-### Adicionar Carro
-![Adicionar Carro](Imagens/Tela%20de%20Adicionar%20Carro.png)
+**Requirements:** Node.js/npm, a PHP-compatible web server, and a database configured for the accompanying PHP API.
 
-### Editar Carro
-![Editar Carro](Imagens/Tela%20de%20Editar%20Carro.png)
+1. Clone: `git clone https://github.com/vftheodoro/App-React-CRUD.git`.
+2. Import `Banco de Dados/cars.sql` into a compatible database and configure `api/config.php` for your local environment.
+3. Serve the `api` directory with a local PHP environment.
+4. Replace the development-network API address in `src/config.js` with a URL reachable from your emulator/physical device.
+5. Install dependencies and start Expo:
 
-### Carros Favoritos
-![Carros Favoritos](Imagens/Tela%20de%20Carros%20Favoritos.png)
-
-### Perfil do Usuário
-![Perfil do Usuário](Imagens/Tela%20de%20Perfil%20do%20Usuario.png)
-
-## 🛠️ Tecnologias Utilizadas
-
-- React Native
-- Expo
-- SQL (Banco de Dados)
-- React Navigation
-- AsyncStorage
-- React Native Vector Icons
-
-## 🚀 Como Executar
-
-1. Clone o repositório:
 ```bash
-git clone [URL_DO_REPOSITÓRIO]
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
-3. Inicie o projeto:
-```bash
+npm ci
 npm start
 ```
 
-4. Escolha a plataforma:
-- Para Android: `npm run android`
-- Para iOS: `npm run ios`
-- Para Web: `npm run web`
+You can also use `npm run android`, `npm run ios`, or `npm run web` for supported Expo targets. The API and device must be able to communicate over the network.
 
-## 📦 Dependências Principais
+## Screenshots
 
-- @react-native-async-storage/async-storage
-- @react-navigation/bottom-tabs
-- @react-navigation/native
-- @react-navigation/native-stack
-- expo
-- react-native-vector-icons
+- [Home](Imagens/Tela%20inicial.png)
+- [Car details](Imagens/Tela%20de%20Detalhes%20dos%20Carros.png)
+- [Add car](Imagens/Tela%20de%20Adicionar%20Carro.png)
+- [Edit car](Imagens/Tela%20de%20Editar%20Carro.png)
+- [Favorites](Imagens/Tela%20de%20Carros%20Favoritos.png)
+- [Profile](Imagens/Tela%20de%20Perfil%20do%20Usuario.png)
 
-## 👨‍💻 Desenvolvido por
+## Scope and security
 
-Victor Theodoro
+This is a learning project, not a production-ready vehicle management service. Replace hard-coded network addresses, review PHP database credentials and authentication requirements, and validate input before any public deployment.
 
-## 📄 Licença
+## License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+See [LICENSE](LICENSE).
